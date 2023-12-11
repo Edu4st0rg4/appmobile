@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Restablecer Contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-text color="primary">
+    <h1>Ingrese sus datos</h1>
+  </ion-text>
+      <ion-input type="email" 
+                  label="Email"
+                  labelPlacement="floating" 
+                  helperText="Debe ingrese un correo válido"
+                  errorText ="El correo no es válido"
+                  ngModel
+                  email              
+                  placeholder="Ingrese correo" [(ngModel)]="email"></ion-input>
+    <ion-button expand="block" (click)="cambiarpass()">Recuperar cuenta<ion-icon name="unlock"></ion-icon></ion-button>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Footer</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="menu"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>RegistrApp Alumnos<ion-icon name="checkmark-circle"></ion-icon></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <br><br><br>
+<ion-content [fullscreen]="true" class="ion-padding">
+<ion-title size="large" class="ion-text-center">RegistrApp<ion-icon name="checkmark-circle"></ion-icon></ion-title>
+<ion-text class="ion-text-center" color="primary">
+  <h4>Alumnos</h4>
+</ion-text>
+  <!-- comentario -->
+  <ion-input type="email" 
+                  label="Email" labelPlacement="floating" placeholder="rut" helperText="Debe ingrese un correo válido" 
+                  errorText ="El correo no es válido" ngModel email              
+                  [(ngModel)]="email"></ion-input>
+      <ion-input type="password" label="Clave" placeholder="************" [(ngModel)]="clave"></ion-input>
+<ion-button fill="outline" shape="round" expand="block" (click)="login()">Ingresar  <ion-icon name="finger-print"></ion-icon></ion-button>
+<!--<ion-button fill="outline" shape="round" expand="block" [routerLink]="['/crearuser']">Crear Cuenta</ion-button>-->
+<br><br><br><br>
+<ion-text color="secondary">
+  <h2>¿No recuerda su contraseña?</h2>
+</ion-text>
+<ion-button fill="outline" shape="round" expand="block" [routerLink]="['/cambiarcontra']">Restablecer Contraseña</ion-button>
+</ion-content>
